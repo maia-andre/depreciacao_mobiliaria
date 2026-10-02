@@ -1,0 +1,27 @@
+# Lista do que pode entrar: o repositório guarda só o método reaproveitável.
+# Dados do sistema, saídas, documentos internos e o CLAUDE.md (contexto com
+# números e casos reais) ficam fora. Para liberar algo novo, inclua uma linha "!".
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/requirements.txt
+!/assets/
+!/scripts/
+!/parametros/
+
+# De docs/, só os modelos genéricos (sem números nem casos reais)
+!/docs/
+/docs/*
+!/docs/modelos/
+
+# Mesmo dentro das pastas liberadas, nenhuma planilha, base ou documento
+*.xlsx
+*.xls
+*.csv
+*.parquet
+*.docx
+__pycache__/
+
+# Exceção: tabelas de parâmetros (vida útil por classe) são públicas e reaproveitáveis
+!/parametros/*.csv
